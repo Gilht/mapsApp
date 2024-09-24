@@ -24,6 +24,18 @@
       </select>
     </div>
   </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <label class="from-label">Fronteras:</label>
+      <select formControlName="borders" class="form-control">
+        <option value="">Seleccione Frontera</option>
+        @for (country of borders; track $index) {
+        <option [value]="country.cca3">{{country.name}}</option>
+        } 
+      </select>
+    </div>
+  </div>
 </form>
 
 <h3>Formulario</h3>
